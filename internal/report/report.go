@@ -34,7 +34,7 @@ func Render(in Input) string {
 	if limit <= 0 {
 		limit = defaultMaxDevices
 	}
-	b.WriteString(fmt.Sprintf("\n⚡ Riziková zařízení (top %d)\n", limit))
+	b.WriteString(fmt.Sprintf("\n⚡ Kde se stahují mračna (top %d)\n", limit))
 	if len(in.Digest.Devices) == 0 {
 		b.WriteString("☀️ Všechno zatím vypadá klidně.\n")
 	} else {
