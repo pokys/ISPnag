@@ -1,0 +1,14 @@
+services:
+  ispnag:
+    image: ghcr.io/pokys/ispnag:latest
+    container_name: ispnag
+    environment:
+      NAGIOS_URL: ${NAGIOS_URL}
+      WEBHOOK_URL: ${WEBHOOK_URL:-}
+      WEBHOOK_TYPE: ${WEBHOOK_TYPE:-slack}
+      LOOKBACK_HOURS: ${LOOKBACK_HOURS:-24}
+      HTTP_TIMEOUT_SECONDS: ${HTTP_TIMEOUT_SECONDS:-30}
+      REPORT_TOP_DEVICES: ${REPORT_TOP_DEVICES:-10}
+      TZ: ${TZ:-Europe/Prague}
+      DEBUG: ${DEBUG:-0}
+    restart: "no"
