@@ -140,7 +140,8 @@ func parseLocation(device string) string {
 }
 
 func annoyance(warnings int, maxPacketLoss, maxRTA float64) int {
-	return warnings + int(maxPacketLoss*2) + int(maxRTA/20)
+	// Favor repeated warnings over one-off peaks to reduce false "stormy" mood.
+	return (warnings * 2) + int(maxPacketLoss) + int(maxRTA/25)
 }
 
 func networkMood(devices []DeviceStats) string {
