@@ -23,7 +23,7 @@ func Render(in Input) string {
 	var b strings.Builder
 
 	b.WriteString("👀 ISPnag — předpověď průšvihů\n\n")
-	b.WriteString(fmt.Sprintf("Dnešní předpověď: %s %s\n", weatherEmojiForMood(in.Digest.NetworkMood), weatherTextForMood(in.Digest.NetworkMood)))
+	b.WriteString(fmt.Sprintf("**Dnešní předpověď:** %s %s\n", weatherEmojiForMood(in.Digest.NetworkMood), weatherTextForMood(in.Digest.NetworkMood)))
 	if in.PersonalityLine != "" {
 		b.WriteString("\n")
 		b.WriteString(in.PersonalityLine)
