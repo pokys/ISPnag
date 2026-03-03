@@ -94,13 +94,13 @@ func weatherEmojiForMood(mood string) string {
 	case "klidná":
 		return "☀️"
 	case "lehce nervózní":
-		return "⛅"
+		return "☀️"
 	case "mrzutá":
-		return "🌥️"
+		return "⛅"
 	case "nestabilní":
-		return "🌧️"
+		return "🌥️"
 	default:
-		return "⛈️"
+		return "🌧️"
 	}
 }
 
@@ -109,13 +109,13 @@ func weatherTextForMood(mood string) string {
 	case "klidná":
 		return "jasno"
 	case "lehce nervózní":
-		return "polojasno"
+		return "jasno"
 	case "mrzutá":
-		return "oblačno"
+		return "polojasno"
 	case "nestabilní":
-		return "přeháňky"
+		return "oblačno"
 	default:
-		return "bouřky"
+		return "přeháňky"
 	}
 }
 
